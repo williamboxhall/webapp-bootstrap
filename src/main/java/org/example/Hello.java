@@ -1,23 +1,23 @@
 package org.example;
 
 public class Hello {
-   private int id;
+    private int id;
 
-   public int getId() {
-      return id;
-   }
+    public int getId() {
+        return id;
+    }
 
-   public void setId(int id) {
-      this.id = id;
-   }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-   private String greeting;
+    private String greeting;
 
-   public String getGreeting() {
-      return greeting;
-   }
+    public String getGreeting() {
+        return greeting;
+    }
 
-   public void setGreeting(String greeting) {
-      this.greeting = greeting;
-   }
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
 }
