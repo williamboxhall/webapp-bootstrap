@@ -6,11 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Hello {
+public class Pie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String greeting;
+    private String topping;
 
     public int getId() {
         return id;
@@ -20,11 +20,11 @@ public class Hello {
         this.id = id;
     }
 
-    public String getGreeting() {
-        return greeting;
+    public String getTopping() {
+        return topping;
     }
 
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
+    public void setTopping(String topping) {
+        this.topping = topping;
     }
 }

@@ -11,27 +11,26 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class HelloService {
+public class PieService {
     @Resource(name = "sessionFactory")
     private SessionFactory sessionFactory;
 
     @SuppressWarnings("unchecked")
-    public List<Hello> getAll() {
+    public List<Pie> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM  Hello");
-        List list = query.list();
-        System.out.println("number of hellos: " + list.size());
-        return list;
+        Query query = session.createQuery("FROM  Pie");
+        return query.list();
     }
 
-    public void add(Hello hello) {
+    public Pie create(Pie pie) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(hello);
+        session.save(pie);
+        return pie;
     }
 
-    public void delete(Integer id) {
+    public Pie get(int id) {
         Session session = sessionFactory.getCurrentSession();
-        Hello hello = (Hello) session.get(Hello.class, id);
-        session.delete(hello);
+        Query query = session.createQuery("FROM  Pie where id =" + id);
+        return (Pie) query.uniqueResult();
     }
 }
