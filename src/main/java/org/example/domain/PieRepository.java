@@ -1,4 +1,4 @@
-package org.example;
+package org.example.domain;
 
 import java.util.List;
 import javax.annotation.Resource;
@@ -6,12 +6,10 @@ import javax.annotation.Resource;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Repository;
 
-@Service
-@Transactional
-public class PieService {
+@Repository
+public class PieRepository {
     @Resource(name = "sessionFactory")
     private SessionFactory sessionFactory;
 
