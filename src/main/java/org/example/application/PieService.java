@@ -3,13 +3,26 @@ package org.example.application;
 import java.util.List;
 
 import org.example.domain.Pie;
+import org.example.domain.PieRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Service
 @Transactional
-public interface PieService {
-    Pie get(int id);
+public class PieService {
+    @Autowired
+    private PieRepository pieRepository;
 
-    List<Pie> getAll();
+    public Pie get(int id) {
+        return pieRepository.get(id);
+    }
 
-    Pie create(Pie pie);
+    public List<Pie> getAll() {
+        return pieRepository.getAll();
+    }
+
+    public Pie create(Pie pie) {
+        return pieRepository.create(pie);
+    }
 }
