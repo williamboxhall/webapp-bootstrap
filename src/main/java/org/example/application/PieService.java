@@ -19,10 +19,11 @@ public class PieService {
     }
 
     public List<Pie> getAll() {
-        return pieRepository.getAll();
+        return pieRepository.findAll();
     }
 
-    public Pie create(Pie pie) {
-        return pieRepository.create(pie);
+    public Pie save(Pie pie) {
+        pieRepository.save(pie);
+        return pie;
     }
 }

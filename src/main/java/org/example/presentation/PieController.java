@@ -15,12 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/pies")
 public class PieController {
-    private final PieService pieService;
-
     @Autowired
-    public PieController(PieService pieService) {
-        this.pieService = pieService;
-    }
+    private PieService pieService;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
@@ -37,6 +33,6 @@ public class PieController {
     @RequestMapping(method = RequestMethod.POST)
     @ResponseBody
     public Pie create(@RequestBody Pie pie) {
-        return pieService.create(pie);
+        return pieService.save(pie);
     }
 }
