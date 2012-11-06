@@ -13,6 +13,7 @@
         <jetty.version>7.2.0.v20101020</jetty.version>
         <spring.version>3.0.5.RELEASE</spring.version>
         <grepo.version>1.5.3</grepo.version>
+        <oval.version>1.61</oval.version>
     </properties>
 
     <dependencies>
@@ -205,6 +206,11 @@
             <groupId>org.codehaus.grepo</groupId>
             <artifactId>grepo-query-hibernate</artifactId>
             <version>${grepo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.oval</groupId>
+            <artifactId>oval</artifactId>
+            <version>${oval.version}</version>
         </dependency>
     </dependencies>
 

@@ -23,5 +23,6 @@
     </bean>
 
     <import resource="grepo.xml"/>
+    <import resource="validation.xml"/>
 
 </beans>

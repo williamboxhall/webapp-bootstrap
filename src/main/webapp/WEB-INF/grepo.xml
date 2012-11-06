@@ -5,7 +5,7 @@
        http://grepo.codehaus.org/schema/grepo-query-hibernate.xsd">
     <import resource="classpath:META-INF/grepo/grepo-query-hibernate-default.cfg.xml"/>
     <bean id="repositoryFactory"
-          class="org.example.infrastructure.CustomHibernateRepositoryFactoryBean" abstract="true">
+          class="org.example.infrastructure.ValidatingHibernateRepositoryFactoryBean" abstract="true">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <gquery:repository-scan base-package="org.example.domain" factory="repositoryFactory"/>
