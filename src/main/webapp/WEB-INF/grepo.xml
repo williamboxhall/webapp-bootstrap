@@ -4,8 +4,9 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd http://grepo.codehaus.org/schema/query-hibernate
        http://grepo.codehaus.org/schema/grepo-query-hibernate.xsd">
     <import resource="classpath:META-INF/grepo/grepo-query-hibernate-default.cfg.xml"/>
-    <gquery:repository-factory id="repositoryFactory">
+    <bean id="repositoryFactory"
+          class="org.example.infrastructure.CustomHibernateRepositoryFactoryBean" abstract="true">
         <property name="sessionFactory" ref="sessionFactory"/>
-    </gquery:repository-factory>
+    </bean>
     <gquery:repository-scan base-package="org.example.domain" factory="repositoryFactory"/>
 </beans>
