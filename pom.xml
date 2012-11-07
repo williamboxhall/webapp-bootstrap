@@ -212,6 +212,12 @@
             <artifactId>oval</artifactId>
             <version>${oval.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>13.0.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
