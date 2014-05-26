@@ -14,7 +14,7 @@ RESTful Resources:
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"topping":"tomato sauce"}' http://localhost:8080/rest/pies/
 curl -X GET http://localhost:8080/rest/pies/
-curl -X GET http://localhost:8080/rest/pies/1
+curl -X GET http://localhost:8080/rest/pies/1/
 ```
 
 Test validation with:
