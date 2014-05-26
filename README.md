@@ -1,8 +1,6 @@
-A toy webapp with a minimalist implementation of a 4-Tier DDD webapp.
+A demo webapp with a minimalist implementation of a 4-Tier DDD webapp.
 
-Spring(MVC/REST/TX), Jackson JSON mapping, OVal validation, Hibernate w/ Grepo Generic Repositories, Maven for build, jetty web server.
-
-Testing with jUnit, Hamcrest and Mockito.
+Spring(MVC/REST/TX), Jackson JSON mapping, OVal validation, Hibernate w/ Grepo Generic Repositories, Maven for build, jetty web server. Testing with jUnit, Hamcrest and Mockito.
 
 
 Build and run with:
